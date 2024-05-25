@@ -42,13 +42,13 @@ $ forge snapshot
 ### Anvil
 
 ```shell
-$ anvil
+$ anvil --block-time 2
 ```
 
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ forge script script/DeployOracles.s.sol:DeployOracles --rpc-url http://127.0.0.1:8545
 ```
 
 ### Cast
