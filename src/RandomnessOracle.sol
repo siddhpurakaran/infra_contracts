@@ -20,9 +20,9 @@ contract RandomnessOracle {
 
     // Computes the randomness(timestamp) value on the fly
     function computeRandomness(uint256 timestamp) public view returns (bytes32) {
-        if (timestamp % 2 != 0) {
-            return bytes32(0); // No block at odd timestamps
-        }
+        // if (timestamp % 2 != 0) {
+        //     return bytes32(0); // No block at odd timestamps
+        // }
 
         bytes32 drandValue = drandOracle.unsafeGetDrandValue(timestamp - DELAY);
         bytes32 sequencerValue = sequencerRandomOracle.unsafeGetSequencerRandom(timestamp);
